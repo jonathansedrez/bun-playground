@@ -1,5 +1,7 @@
 import { Hono } from "hono";
-import { addTodo, getTodos } from "./db";
+import { HTTPException } from "hono/http-exception";
+
+import { addTodo, getTodos, getTodoById } from "./db";
 
 const app = new Hono();
 
@@ -18,6 +20,17 @@ app.post("/todos", async ({ req, text, json }) => {
 app.get("/todos", ({ json }) => {
   const todos = getTodos();
   return json(todos, 200);
+});
+
+app.get("/todos/:id", ({ req, json }) => {
+  const id = Number(req?.param("id"));
+  const todo = getTodoById(id);
+
+  if (!todo) {
+    throw new HTTPException(404, { message: "Todo not found" });
+  }
+
+  return json(todo, 200);
 });
 
 export default app;

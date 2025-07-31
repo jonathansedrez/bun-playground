@@ -35,3 +35,11 @@ export function getTodos(): Todo[] {
       isChecked: !!todo.isChecked,
     }));
 }
+
+export function getTodoById(id: number): Todo | null {
+  const result = db
+    .query<Todo, []>(`SELECT id, label, isChecked FROM todos WHERE id = ${id}`)
+    .get();
+
+  return result ? { ...result, isChecked: !!result.isChecked } : null;
+}
