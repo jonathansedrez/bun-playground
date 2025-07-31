@@ -25,3 +25,13 @@ export function addTodo(label: string, isChecked?: boolean): Todo {
     isChecked: isChecked || false,
   };
 }
+
+export function getTodos(): Todo[] {
+  return db
+    .query<Todo, []>("SELECT id, label, isChecked FROM todos")
+    .all()
+    .map((todo) => ({
+      ...todo,
+      isChecked: !!todo.isChecked,
+    }));
+}
