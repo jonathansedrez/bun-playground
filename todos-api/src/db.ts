@@ -43,3 +43,15 @@ export function getTodoById(id: number): Todo | null {
 
   return result ? { ...result, isChecked: !!result.isChecked } : null;
 }
+
+export function deleteTodo(id: number): boolean {
+  const todoId = getTodoById(id);
+  const query = db.query(`DELETE FROM todos WHERE id = ${id}`);
+  query.run();
+
+  if (!todoId) {
+    return false;
+  }
+
+  return !!todoId;
+}
