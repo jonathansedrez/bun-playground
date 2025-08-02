@@ -23,4 +23,12 @@ describe("db.ts", () => {
     expect(todos.length).toBe(1);
     expect(todos[0].label).toBe("Learn Bun");
   });
+
+  it("should add a new todo with isChecked=true", () => {
+    const todo = addTodo("Already done", true);
+    expect(todo.isChecked).toBe(true);
+
+    const found = getTodoById(todo.id);
+    expect(found?.isChecked).toBe(true);
+  });
 });
