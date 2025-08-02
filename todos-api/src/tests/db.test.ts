@@ -31,4 +31,11 @@ describe("db.ts", () => {
     const found = getTodoById(todo.id);
     expect(found?.isChecked).toBe(true);
   });
+
+  it("should get a todo by ID", () => {
+    const todo = addTodo("Check by ID");
+    const found = getTodoById(todo.id);
+    expect(found).not.toBeNull();
+    expect(found?.label).toBe("Check by ID");
+  });
 });
