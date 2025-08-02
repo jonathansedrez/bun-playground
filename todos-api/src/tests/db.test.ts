@@ -43,4 +43,18 @@ describe("db.ts", () => {
     const found = getTodoById(9999);
     expect(found).toBeNull();
   });
+
+  it("should delete a todo and return true", () => {
+    const todo = addTodo("Delete me");
+    const result = deleteTodo(todo.id);
+    expect(result).toBe(true);
+
+    const found = getTodoById(todo.id);
+    expect(found).toBeNull();
+  });
+
+  it("should return false if trying to delete a non-existing todo", () => {
+    const result = deleteTodo(123456);
+    expect(result).toBe(false);
+  });
 });
