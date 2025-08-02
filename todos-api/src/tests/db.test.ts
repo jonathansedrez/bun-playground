@@ -38,4 +38,9 @@ describe("db.ts", () => {
     expect(found).not.toBeNull();
     expect(found?.label).toBe("Check by ID");
   });
+
+  it("should return null if todo does not exist", () => {
+    const found = getTodoById(9999);
+    expect(found).toBeNull();
+  });
 });
