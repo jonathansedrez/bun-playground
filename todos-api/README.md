@@ -23,3 +23,4 @@ open http://localhost:3000
   Request 5 → Replica B
   Request 6 → Replica C
 - The basic load balancing strategy in Nginx is round-robin, which is enabled by default when you define multiple servers in an upstream block.
+- minikube: is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
