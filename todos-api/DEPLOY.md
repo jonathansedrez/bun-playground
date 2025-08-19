@@ -3,8 +3,8 @@
 ### ✅ **Day 1 – Monday: AWS Setup**
 
 - [x] Create an **AWS account** (if you don’t already have one).
-- [ ] Go to **EC2 dashboard** → Launch a new **Ubuntu EC2 instance** (t2.micro).
-- [ ] Configure **Security Group**: open ports 22 (SSH), 80 (HTTP), 443 (HTTPS).
+- [x] Go to **EC2 dashboard** → Launch a new **Ubuntu EC2 instance** (t2.micro).
+- [x] Configure **Security Group**: open ports 22 (SSH), 80 (HTTP), 443 (HTTPS).
 - [ ] Download your `.pem` key → test SSH connection:
   ```bash
   ssh -i my-key.pem ubuntu@<EC2_PUBLIC_IP>
@@ -103,3 +103,9 @@
   - [ ] Security groups allow only necessary ports (22, 80, 443).
 
 🎉 By Friday, your **Bun todos-api** is live with a domain + SSL.
+
+
+---
+
+# Learnings:
+- By default Security Group only has the SSH; To access this by cli we should export this on "Inbound security group rules"
