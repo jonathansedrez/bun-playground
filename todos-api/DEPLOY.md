@@ -9,7 +9,7 @@
   ```bash
   ssh -i my-key.pem ubuntu@<EC2_PUBLIC_IP>
   ```
-- [ ] Make sure you can connect. Nothing else today.
+- [x] Make sure you can connect. Nothing else today.
 
 ---
 
