@@ -5,7 +5,7 @@
 - [x] Create an **AWS account** (if you don’t already have one).
 - [x] Go to **EC2 dashboard** → Launch a new **Ubuntu EC2 instance** (t2.micro).
 - [x] Configure **Security Group**: open ports 22 (SSH), 80 (HTTP), 443 (HTTPS).
-- [ ] Download your `.pem` key → test SSH connection:
+- [x] Download your `.pem` key → test SSH connection:
   ```bash
   ssh -i my-key.pem ubuntu@<EC2_PUBLIC_IP>
   ```
