@@ -15,8 +15,8 @@
 
 ### ✅ **Day 2 – Tuesday: Server Setup**
 
-- [ ] SSH into your EC2 instance.
-- [ ] Update packages:
+- [x] SSH into your EC2 instance.
+- [x] Update packages:
   ```bash
   sudo apt update && sudo apt upgrade -y
   ```
@@ -104,8 +104,8 @@
 
 🎉 By Friday, your **Bun todos-api** is live with a domain + SSL.
 
-
 ---
 
 # Learnings:
+
 - By default Security Group only has the SSH; To access this by cli we should export this on "Inbound security group rules"
