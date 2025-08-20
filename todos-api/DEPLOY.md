@@ -20,7 +20,7 @@
   ```bash
   sudo apt update && sudo apt upgrade -y
   ```
-- [ ] Install **Git** & **Bun**:
+- [x] Install **Git** & **Bun**:
   ```bash
   sudo apt install git -y
   curl -fsSL https://bun.sh/install | bash
