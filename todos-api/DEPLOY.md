@@ -25,7 +25,7 @@
   sudo apt install git -y
   curl -fsSL https://bun.sh/install | bash
   ```
-- [ ] Clone your repo:
+- [x] Clone your repo:
   ```bash
   git clone https://github.com/jonathansedrez/bun-playground.git
   cd bun-playground/todos-api
