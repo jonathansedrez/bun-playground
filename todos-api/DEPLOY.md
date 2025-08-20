@@ -31,11 +31,11 @@
   cd bun-playground/todos-api
   bun install
   ```
-- [ ] Test run:
+- [x] Test run:
   ```bash
   bun run dev
   ```
-- [ ] Verify app runs at `http://<EC2_PUBLIC_IP>:3000`.
+- [x] Verify app runs at `http://<EC2_PUBLIC_IP>:3000`.
 
 ---
 
@@ -108,4 +108,5 @@
 
 # Learnings:
 
-- By default Security Group only has the SSH; To access this by cli we should export this on "Inbound security group rules"
+- By default Security Group only has the SSH; To access this by cli we should export this on "Inbound security group rules";
+- to access port 3000 its necessary to change "Inbound security group rules" to accept a custom TCP and enable por 3000 directly on AWS;
