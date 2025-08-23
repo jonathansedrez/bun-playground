@@ -41,7 +41,7 @@
 
 ### ✅ **Day 3 – Wednesday: Process Manager & Nginx**
 
-- [ ] Install **PM2** to keep app alive:
+- [x] Install **PM2** to keep app alive:
   ```bash
   bun add -g pm2
   pm2 start index.ts --interpreter=bun
@@ -110,3 +110,4 @@
 
 - By default Security Group only has the SSH; To access this by cli we should export this on "Inbound security group rules";
 - to access port 3000 its necessary to change "Inbound security group rules" to accept a custom TCP and enable por 3000 directly on AWS;
+- PM2 is a daemon process manager that will help you manage and keep your application online.
