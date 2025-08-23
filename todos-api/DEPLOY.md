@@ -48,7 +48,7 @@
   pm2 startup
   pm2 save
   ```
-- [ ] Install **Nginx**:
+- [x] Install **Nginx**:
   ```bash
   sudo apt install nginx -y
   ```
@@ -111,3 +111,4 @@
 - By default Security Group only has the SSH; To access this by cli we should export this on "Inbound security group rules";
 - to access port 3000 its necessary to change "Inbound security group rules" to accept a custom TCP and enable por 3000 directly on AWS;
 - PM2 is a daemon process manager that will help you manage and keep your application online.
+- Nginx: Nginx is a fast web server and reverse proxy used to route traffic, serve static files, and enable HTTPS.
