@@ -52,7 +52,7 @@
   ```bash
   sudo apt install nginx -y
   ```
-- [ ] Configure Nginx reverse proxy (`/etc/nginx/sites-available/todos`):
+- [x] Configure Nginx reverse proxy (`/etc/nginx/sites-available/todos`):
 
   ```nginx
   server {
